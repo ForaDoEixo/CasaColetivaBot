@@ -1,0 +1,7 @@
+web:
+  build: .
+  links:
+    - mongo
+mongo:
+  image: mongo
+

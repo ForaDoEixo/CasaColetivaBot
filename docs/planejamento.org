@@ -1,0 +1,172 @@
+#+TITLE: Descritivo dos processos e planejamento tecnológico
+#+AUTHOR: Alan Meira & Gian
+#+DATE:28-01-2016
+
+* Sumário
+
+* Processos
+** Caixa Coletivo
+*** Livro-Caixa
+**** Informar gasto
+***** Entrada
+/gastei VALOR NOTA FORNECEDOR FRENTE
+Exemplo: /gastei dinheiro 50
+***** Saída
+Passo-a-passo para o preenchimento do caixa
+e Confirmação do recebimento da informação
+**** Informar entrada de dinheiro
+***** Entrada
+/entrou VALOR
+Exemplo: /entrou dinheiro 100
+***** Saída
+Confirmação de recebimento da informação e saldo
+**** Listar gastos
+***** Entrada
+/listar gastos
+***** Saída
+Lista dos gastos do mês corrente
+**** Verificar saldo
+***** Entrada
+/verificar saldo
+***** Saída
+Informa o saldo disponível pra saques no Livro-Caixa
+** Cozinha
+*** Cardápio
+*** Receitas
+*** Estoque
+**** Informar falta de material
+***** Entrada
+/falta ITEM
+Exemplo: /falta manteiga
+***** Saída
+Informa que o item faltante foi para a lista de itens que faltam
+**** Listar itens que faltam
+***** Entrada
+/listar compras
+***** Saída
+Lista os itens que foram incluídos na lista de itens que faltam
+**** Marcar item como comprado
+***** Entrada
+/comprei ITEM
+***** Saída
+Confirma que um item foi comprado e removido da lista de compras
+** Equipamentos
+*** Inventário
+**** Adicionar
+**** Listar
+***** Entrada
+/listar equipamentos CATEGORIA
+Exemplo: /listar equipamentos AUDIOVISUAL
+***** Saída
+Lista numerada de equipamentos da categoria selecionada
+**** Ver mais informações sobre um equipamento
+**** Remover
+**** Adicionar/remover/editar categoria
+- AUDIOVISUAL
+- PALCO
+- ILUMINAÇÃO
+*** Fluxo de utilização
+**** Informar retirada
+***** Entrada
+/retirar equipamentos CATEGORIA
+Exemplo: /retirar equipamentos AUDIOVISUAL
+***** Perguntas
+- Lista de itens que deseja retirar
+- Pra onde os equipamentos irão?
+***** Saída
+Passo-a-passo para a retirada de um equipamentos
+**** Informar devolução
+** Inventário e uso dos carros
+*** Inventário
+**** Adicionar
+**** Listar
+***** Entrada
+/listar carros
+***** Saída
+Lista carros da casa
+**** Ver mais informações sobre um carro
+**** Remover
+*** Fluxo de utilização
+**** Informar retirada do carro
+***** Entrada
+/retirar carro ID_DO_CARRO
+Exemplo: /retirar carro sandero
+***** Perguntas
+- Pra onde vai?
+- O que vai fazer?
+- Quanto tempo vai demorar? (Previsão)
+***** Saída
+Informa se foi possível agendar a utilização
+**** Agendar traslado
+***** Entrada
+/agendar traslado
+***** Perguntas
+- Horas
+- Local
+- Quem precisa do traslado?
+**** Pegar traslado para fazer
+***** Entrada
+/pegar traslado #ID
+***** Saida
+Confirmação do traslado, para o motorista e para quem agendou
+**** Informar chegada
+***** Entrada
+/cheguei traslado
+***** Saída
+Confirma a chegada e a disponibilidade do carro
+** Cronograma de revezamento
+*** Lista de Tarefas
+**** Adicionar tarefa
+***** Entrada
+***** Saída
+**** Remover tarefa
+***** Entrada
+***** Saída
+**** Listar tarefas
+***** Entrada
+***** Saída
+**** Adicionar/remover/editar categoria
+- AUDIOVISUAL
+- PALCO
+- ILUMINAÇÃO
+*** Cronograma de tarefas
+**** Apontar tarefa para alguém
+***** Entrada
+/tarefa #ID DIA PESSOA
+***** Saída
+Confirmação de apontamento
+**** Confirmar realização da tarefa
+***** Entrada
+/finalizar tarefa #ID
+***** Saída
+Confirmação de finalização da tarefa. Envio de mensagem para a pessoa responsável pela lista de tarefas.
+** Agenda de Eventos
+*** Gestão
+**** Adicionar evento
+***** Entrada
+***** Saída
+**** Remover evento
+***** Entrada
+***** Saída
+**** Listar eventos
+***** Entrada
+***** Saída
+**** Adicionar/remover/editar categoria
+- AUDIOVISUAL
+- PALCO
+- ILUMINAÇÃO
+
+* Necessidades Funcionais
+** Transformar processos analógicos em digitais
+** Consolidar logs e dados em um banco central (BigData)
+** Extrair analises, padrões e inteligência e retroalimentar/otimizar os processos
+* Necessidades Técnicas
+** Disponibilidade 24/7/365
+** Garantia de acesso à informações atualizadas (centralização dos dados)
+** Tecnologia que se adeque ao processo da forma mais transparente possivel ("Chat as a UI")
+* Estratégia Tecnológica
+** Plataforma
+- Telegram
+- NodeJS
+- MongoDB
+- Amazon WebServices / DigitalOcean

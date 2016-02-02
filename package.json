@@ -1,0 +1,29 @@
+{
+  "name": "xepa-bot",
+  "version": "0.0.1",
+  "description": "Bot da Casa Coletiva",
+  "main": "Bot.js",
+  "dependencies": {
+    "cheerio": "*",
+    "google-images": "^1.0.0",
+    "html-metadata": "git://github.com/mvolz/html-metadata.git",
+    "kerberos": "0.0.18",
+    "mathjs": "^2.5.0",
+    "mongodb": "^2.1.4",
+    "node-telegram-bot-api": "git://github.com/yagop/node-telegram-bot-api.git",
+    "request": "^2.67.0",
+    "underscore.string": "^3.2.2"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "chai": "~3.4.1",
+    "sinon": "~1.17.2",
+    "sinon-chai": "~2.8.0"
+  },
+  "scripts": {
+    "start": "node Bot.js",
+    "test": "mocha test"
+  },
+  "author": "Alan Meira",
+  "license": "AGPL"
+}
